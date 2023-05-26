@@ -23,6 +23,13 @@ cc_library_shared {
     export_include_dirs: ["inc"],
     vendor: true,
 
-    cflags: ["-DDEBUG"] + ["-DFEATURE_IPA_ANDROID"] + ["-Wno-int-conversion"],
+    cflags: ["-DDEBUG"] + ["-DFEATURE_IPA_ANDROID"] + [
+        "-Wno-format",
+        "-Wno-incompatible-pointer-types",
+        "-Wno-int-conversion",
+        "-Wno-unused-but-set-variable",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+    ],
 
 }
